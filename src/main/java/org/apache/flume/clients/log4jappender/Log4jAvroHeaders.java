@@ -26,6 +26,7 @@ public enum Log4jAvroHeaders {
   LOG_LEVEL("flume_client_log4j_log_level"),
   MESSAGE_ENCODING("flume_client_log4j_message_encoding"),
   TIMESTAMP("flume_client_log4j_timestamp"),
+  ES_TIMESTAMP("timestamp"),
   AVRO_SCHEMA_LITERAL("flume_avro_schema_literal"),
   AVRO_SCHEMA_URL("flume_avro_schema_url");
 

@@ -136,12 +136,14 @@ public class Log4jAppender extends AppenderSkeleton {
     hdrs.put(Log4jAvroHeaders.LOGGER_NAME.toString(), event.getLoggerName());
     hdrs.put(Log4jAvroHeaders.TIMESTAMP.toString(),
         String.valueOf(event.timeStamp));
+    hdrs.put(Log4jAvroHeaders.ES_TIMESTAMP.toString(),
+            String.valueOf(event.timeStamp));
 
     //To get the level back simply use
     //LoggerEvent.toLevel(hdrs.get(Integer.parseInt(
     //Log4jAvroHeaders.LOG_LEVEL.toString()))
     hdrs.put(Log4jAvroHeaders.LOG_LEVEL.toString(),
-        String.valueOf(event.getLevel().toInt()));
+        String.valueOf(event.getLevel().toString()));
 
     Event flumeEvent;
     Object message = event.getMessage();
